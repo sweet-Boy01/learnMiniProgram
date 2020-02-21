@@ -1,0 +1,11 @@
+.tabbarControl{
+  display: flex;
+  text-align: center;
+}
+.tabbarItem{
+  flex:1;
+  padding: 20rpx;
+}
+.active{
+  color: red;
+}

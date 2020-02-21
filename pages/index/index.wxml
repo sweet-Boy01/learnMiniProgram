@@ -2,9 +2,55 @@
 <view>hello {{name}}</view>
 
 <!-- 列表渲染 -->
-<view wx:for="{{students}}">{{item.name}}---{{item.age}}</view>
+<!-- <view wx:for="{{students}}">{{item.name}}---{{item.age}}</view> -->
 
 <!-- 事件绑定 -->
 <view>{{counter}}</view>
 <button size='mini' bindtap='handlebtnAdd'>+</button>
 <button size="mini" bindtap="handlebtnSubtract">-</button>
+
+<!-- input 输入框的使用 -->
+<input value="哈哈哈" type='idcard' confirm-type='go'
+  bindinput="handleInput"
+  bindfocus="hadleFocus"
+/>
+
+<!-- scroll-view的使用 -->
+<scroll-view class='container'>
+  <view wx:for='{{10}}'></view>
+</scroll-view>
+
+
+------模板的使用----------
+<import src="../template/info.wxml"/>
+<template is='info' data="{{text:'我是info模板内容',btn:'按钮'}}"/>
+
+-----------wxs------------
+<wxs src='./info.wxs' module = 'info'/>
+<view>{{info.handleNumber(10,20)}}</view>,
+------自定义组件的使用-----
+<my-cpn/>
+
+
+-----my-props-------
+<my-props titleClass="red"/>
+<my-props titleClass='blue'/>
+<my-props titleClass="yellow"/>
+
+<view>-----组件传递事件-------</view>
+<view>{{counter}}</view>
+<my-event bind:handleEvent="handleEvent"></my-event>
+
+<view>练习</view>
+<view>我选择的是：{{pageContent}}</view>
+<my-tabbar bind:handelPage='pageControl' tabbarList="{{['精选','爆款','商品']}}"/>
+
+<!-- 在页面使用setData/方法修改组件中的数据 -->
+<button size="mini" bind:tap='handleCpn'>修改数据</button>
+<my_sel class='sel_class'/>
+
+<!-- 多个插槽的使用 -->
+<my-mslot>
+  <button slot='slot2'>按钮</button>
+  <text slot='slot1 '>我是插槽内容</text>
+</my-mslot>

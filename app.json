@@ -1,6 +1,11 @@
 {
+  "usingComponents":{
+   
+  },
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/category/category",
+    "components/my-cpm/my-cpn"
   ],
   "window": {
     "backgroundTextStyle": "light",

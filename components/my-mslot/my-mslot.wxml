@@ -1,0 +1,4 @@
+<view>我是插槽的头部</view>
+<slot name='slot1'></slot>
+<slot name='slot2'></slot>
+<view>我是插槽的底部</view>

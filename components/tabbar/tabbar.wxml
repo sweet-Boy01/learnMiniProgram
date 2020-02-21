@@ -1,0 +1,5 @@
+<view class='tabbarControl'>
+  <block wx:for="{{tabbarList}}" wx:key="{{index}}">
+    <view class='tabbarItem {{currentIndex == index? "active":""}}' bind:tap='handleItem' data-index="{{index}}" data-title="{{tabbarList[index]}}">{{item}}</view>
+  </block>
+</view>

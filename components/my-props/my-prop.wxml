@@ -1,0 +1,2 @@
+<view class="titleClass">{{title}}</view>
+<view>我是自定义组件props</view>
