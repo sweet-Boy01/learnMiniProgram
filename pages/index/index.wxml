@@ -1,13 +1,10 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+<!-- 微信弹框的使用 -->
+<!-- 1、showToast -->
+<button size='mini' bind:tap='handleShowToast'>showToast</button>
+<!-- 2、showModal -->
+<button size='mini' bind:tap='handleShowModal'>showModal</button>
+<!-- 3.showLoading -->
+<button size='mini' bind:tap='handleShowLoading'>showLoading</button>
+
+<!-- 4、showActionSheet -->
+<button size='mini' bind:tap='handleAction'>ShowAction</button>
