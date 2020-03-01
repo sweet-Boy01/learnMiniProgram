@@ -1,13 +1,7 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+<!--小程序 登录流程
+1、通过 wx.login()获取到code
+2、通过wx.request()将获取到的code发送给服务器
+3、服务器将code+appid+appSecret传递给微信服务器
+4、微信服务器返回session_key+openid(作为当前微信唯一标识)
+5、服务器将openid+账号+密码进行绑定，返回一个token给客户端进行保存，下次发请求时将token携带过去
+ -->
