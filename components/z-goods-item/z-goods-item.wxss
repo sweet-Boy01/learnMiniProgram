@@ -1,0 +1,52 @@
+.goods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content : space-around;
+}
+
+.goods-item {
+  width: 48%;
+  position: relative;
+  margin-bottom: 78rpx;
+  margin-top: 15rpx;
+}
+
+.img {
+  width: 100%;
+  border-radius: 10rpx;
+ 
+}
+
+.desc-info {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  position: absolute;
+  /* z-index: 10; */
+  bottom: -80rpx;
+}
+
+.desc-info>.title {
+  width: 100%;
+  font-size: 30rpx;
+  color: #999; 
+  
+}
+.info{
+  text-align: center;
+}
+.price{
+  color: #ff5777;
+  font-size: 30rpx;
+  margin-right: 10px;
+}
+.cfav{
+  font-size: 30rpx;
+}
+.icon{
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  top: 5rpx;
+}

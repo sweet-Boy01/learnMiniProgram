@@ -1,0 +1,4 @@
+/* pages/home/childCpns/z-popular/z-popular.wxss */
+.propular image{
+  width:100%;
+}

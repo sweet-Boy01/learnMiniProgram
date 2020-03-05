@@ -1,0 +1,3 @@
+<view class='propular'>
+  <image src='/assets/home/popular.jpg' mode='widthFix'></image>
+</view>

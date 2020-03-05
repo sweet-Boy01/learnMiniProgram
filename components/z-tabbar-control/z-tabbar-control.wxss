@@ -1,0 +1,16 @@
+/* components/z-tabbar-control/z-tabbar-control.wxss */
+.tabbarCtrl{
+  display: flex;
+  text-align: center;
+  background: #fff;
+  padding-bottom: 10rpx;
+}
+.tabbarCtrl-item{
+  flex: 1;
+  font-size: 36rpx;
+  color: #666;
+}
+.active{
+  color: #ff5777;
+  border-bottom: 4rpx solid #ff5777;
+}

@@ -1,0 +1,7 @@
+<view class='tabbarCtrl'>
+  <block wx:for='{{titles}}' wx:key='{{index}}'>
+    <view class='tabbarCtrl-item {{currentIndex==index?"active":""}}' bind:tap="handleTabbarCtrl" data-index='{{index}}'>
+      {{item}}
+    </view>
+  </block>
+</view>

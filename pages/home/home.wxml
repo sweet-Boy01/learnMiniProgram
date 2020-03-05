@@ -1,0 +1,13 @@
+<!--1、 轮播图展示 -->
+<z-swiper list='{{banners}}'></z-swiper>
+<!-- 2、推荐数据的展示 -->
+<z-recommend recommends="{{recommends}}" mode='widthFix' bind:imgLoad='imgLoad'/>
+<!-- 3、本周流行展示 -->
+<z-popular/>
+<!-- 4、tabbar-control -->
+<z-tabbar-control titles="{{titles}}" bind:handleTabbarClick="handleTabbarClick" class="{{isFixed?'fixed':''}}"  id='tabControl'/>
+<z-tabbar-control titles="{{titles}}" wx:if="{{isFixed}}"/>
+<!-- 5、商品数据展示 -->
+<z-goods-item goodsList="{{goods[currentType].list}}"/>
+<!-- 6、返回首页 -->
+<z-back-top wx:if="{{backTop_isShow }}"/>

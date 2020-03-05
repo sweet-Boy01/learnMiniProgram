@@ -1,0 +1,9 @@
+.back-top{
+  position: fixed;
+  right:15rpx;
+  bottom: 15rpx;
+}
+.icon{
+  width: 100rpx;
+  height: 100rpx;
+}
